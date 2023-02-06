@@ -56,8 +56,12 @@ function App() {
     setTodos(newTodos);
   };
 
+  const isTodoAllChecked = () => {
+    return todos.every((todo) => todo.isChecked);
+  };
+
   const handleCheckedAllClick = () => {
-    const isAllChecked = todos.every((todo) => todo.isChecked);
+    const isAllChecked = isTodoAllChecked();
     const newTodos = todos.map((todo) => {
       return {
         ...todo,
@@ -81,6 +85,7 @@ function App() {
       />
       <TodoListArea todoCount={todos.length}>
         <TodoTools
+          isAllChecked={isTodoAllChecked()}
           onCheckedAllClick={handleCheckedAllClick}
           onRemoveAllClick={handleRemoveAllClick}
         />

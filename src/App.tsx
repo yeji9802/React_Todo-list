@@ -56,7 +56,16 @@ function App() {
     setTodos(newTodos);
   };
 
-  const handleCheckedAllClick = () => {};
+  const handleCheckedAllClick = () => {
+    const isAllChecked = todos.every((todo) => todo.isChecked);
+    const newTodos = todos.map((todo) => {
+      return {
+        ...todo,
+        isChecked: !isAllChecked,
+      };
+    });
+    setTodos(newTodos);
+  };
 
   const handleRemoveAllClick = () => {
     setTodos([]);

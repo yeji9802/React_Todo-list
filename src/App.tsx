@@ -50,6 +50,10 @@ function App() {
 
   const handleRemoveClick = (id: number) => {
     console.log("remove", id);
+    const newTodos = todos.filter((todo) => {
+      return todo.id !== id;
+    });
+    setTodos(newTodos);
   };
 
   return (

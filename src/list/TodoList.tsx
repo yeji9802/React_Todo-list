@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoType } from "../App";
+import { TodoType } from "../todo/todoReducer";
 import TodoListItem from "../listItem/TodoListItem";
 import styles from "./TodoList.module.css";
 

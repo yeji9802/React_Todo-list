@@ -1,0 +1,8 @@
+.title {
+}
+
+.count {
+  color: #32cd32;
+  /* inherit : 상위 컴포넌트 색상 따라가기 */
+  background-color: inherit;
+}

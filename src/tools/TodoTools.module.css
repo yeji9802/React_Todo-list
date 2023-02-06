@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin: 20px 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  color: #c0c0c0;
+  background-color: inherit;
+}
+
+.AllIcon {
+  font-size: 25px;
+  margin-right: 5px;
+}

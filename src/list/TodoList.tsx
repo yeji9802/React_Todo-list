@@ -5,6 +5,8 @@ import styles from "./TodoList.module.css";
 
 interface TodoListProps {
   todos: TodoType[];
+  onCheckedClick: (id: number) => void;
+  onRemoveClick: (id: number) => void;
 }
 
 const TodoList = (props: TodoListProps) => {
@@ -15,8 +17,11 @@ const TodoList = (props: TodoListProps) => {
           return (
             <TodoListItem
               key={todo.id}
+              id={todo.id}
               text={todo.text}
               isChecked={todo.isChecked}
+              onCheckedClick={props.onCheckedClick}
+              onRemoveClick={props.onRemoveClick}
             />
           );
         })}

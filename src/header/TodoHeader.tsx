@@ -1,12 +1,16 @@
 import React from "react";
 import styles from "./TodoHeader.module.css";
 
-const TodoHeader = () => {
+interface TodoHeaderProps {
+  count: number;
+}
+
+const TodoHeader = (props: TodoHeaderProps) => {
   return (
     <header>
       <h1 className={styles.title}>
         {" "}
-        <mark className={styles.count}>5</mark>개의 할 일
+        <mark className={styles.count}>{props.count}</mark>개의 할 일
       </h1>
     </header>
   );

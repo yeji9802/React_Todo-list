@@ -29,7 +29,9 @@ const TodoListItem = (props: TodoListItemProps) => {
           ].join(" ")}
           onClick={handleCheckedClick}
         />
-        <span>{props.text}</span>
+        <span className={props.isChecked ? styles.linethrough : ""}>
+          {props.text}
+        </span>
         <IoIosRemoveCircleOutline
           className={styles.removeIcon}
           onClick={handleRemoveClick}

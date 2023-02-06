@@ -1,15 +1,24 @@
 import React from "react";
+import { TodoType } from "../App";
 import TodoListItem from "../listItem/TodoListItem";
 import styles from "./TodoList.module.css";
 
-const TodoList = () => {
-  const arr = ["html", "css", "JavaScript"];
+interface TodoListProps {
+  todos: TodoType[];
+}
 
+const TodoList = (props: TodoListProps) => {
   return (
     <section className={styles.container}>
       <ol className={styles.todoList}>
-        {arr.map((item, index) => {
-          return <TodoListItem key={index} item={item} />;
+        {props.todos.map((todo, index) => {
+          return (
+            <TodoListItem
+              key={todo.id}
+              text={todo.text}
+              isChecked={todo.isChecked}
+            />
+          );
         })}
       </ol>
     </section>

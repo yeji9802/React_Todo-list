@@ -56,6 +56,12 @@ function App() {
     setTodos(newTodos);
   };
 
+  const handleCheckedAllClick = () => {};
+
+  const handleRemoveAllClick = () => {
+    setTodos([]);
+  };
+
   return (
     <main className="App">
       <TodoHeader count={todos.filter((todo) => !todo.isChecked).length} />
@@ -65,7 +71,10 @@ function App() {
         onSubmit={handleSubmit}
       />
       <TodoListArea todoCount={todos.length}>
-        <TodoTools />
+        <TodoTools
+          onCheckedAllClick={handleCheckedAllClick}
+          onRemoveAllClick={handleRemoveAllClick}
+        />
         <Divider />
         <TodoList
           todos={todos}

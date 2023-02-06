@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+## CRUD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말
 
-## Available Scripts
+## Create(생성)
 
-In the project directory, you can run:
+사용자가 입력한 내용을 리스트의 아이템 상태 데이터(state)로 저장
 
-### `npm start`
+## Read(읽기)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+수정, 삭제 시 화면에 내용을 갱신하기 위해 데이터를 읽어오는 행위로 React는 state 선언 시 변경이 일어날 때 자동으로 갱신
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Update(갱신)
 
-### `npm test`
+상태 데이터(state)를 새로운 상태 데이터로 수정
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Delete(삭제)
 
-### `npm run build`
+상태 데이터(state)를 삭제
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 기능 정의
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+C - 단일 추가(할 일 추가)
+U - 단일 수정(완료 체크 및 해제)
+U - 전체 수정(전체 완료 체크 및 해제)
+D - 단일 삭제(할 일 삭제)
+D - 전체 삭제(할 일 전체 삭제)
